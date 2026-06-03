@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  wall_e:
+
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    container_name: wall_e
+
+    network_mode: host
+    ipc: host
+
+    privileged: true
+
+    stdin_open: true
+    tty: true
+
+    environment:
+      - ROS_DOMAIN_ID=0
+      - DISPLAY=${DISPLAY}
+
+    volumes:
+      # Workspace ROS
+      - ./ros2_ws:/workspace/ros2_ws
+
+      # X11 (RViz, rqt...)
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+
+      # Caméras USB
+      - /dev:/dev
+
+    working_dir: /workspace/ros2_ws
+
+    command: bash
