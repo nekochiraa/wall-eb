@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-robot-state-publisher \
     ros-jazzy-rviz2 \
     ros-jazzy-teleop-twist-keyboard \
-    && rm -rf /var/lib/apt/lists/*
-
+    && rm -rf /var/lib/apt/lists/* \
+    source /opt/ros/jazzy/setup.bash
 WORKDIR /workspace
 
 CMD ["bash"]
