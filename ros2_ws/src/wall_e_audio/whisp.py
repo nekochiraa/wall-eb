@@ -8,21 +8,42 @@ nltk.download('omw-1.4', quiet=True)
 
 lang='fra'
 
-
 nlp = spacy.load("fr_core_news_sm")
 #actions a effectuer par Wall-e B
 def action_search():
-    print("search")
+    print("bip, boup *bruits electroniques*...recherche en cours...")
+    #la on plug in la navigation de l'atelier + reconnaissance faciale
 
 def action_speak():
-    print("speak")
+    print("que penses tu de la tastycroustification de le societe?")
+    #plug le llm + le tts
 
+def action_shout():
+    print("ABCD")
+    #tts encore hein, on change pas une equipe qui gagne
+
+def action_internet():
+    print("fais comme si j'avais google un truc.")
+    #llm google un truc, puis print le resultat puis tts ou qqchose comme ca
+
+def action_bis():
+    print("2e action")
 def action_none():
     return
+#mots qui contextualisent
+context = {
+    "la": action_bis,
+    "le": action_bis,
+    "sur": action_bis,
+    "vas": action_bis
+
+}
 #mots a chercher -> action
 keywords = {
-    "chercher": action_search,   
-    "parler":   action_speak,    
+    "chercher": action_search,
+    "parler":   action_speak,
+    "julien":    action_shout,
+    "internet": action_internet,#on verra apres pour les priorites/separer la phrase en sujet-verbe-complement
 }
  
 #synonymes depuios wordnet
@@ -34,31 +55,43 @@ def get_synonyms(word: str, lang: str = "fra") -> set[str]:
     return synonyms
 
 def build_synonym_map(keywords: dict, lang: str = "fra") -> dict[str, callable]:
-
     expanded = {}
     for word, action in keywords.items():
-        expanded[word] = action                        
+        expanded[word] = action  
         for synonym in get_synonyms(word, lang):
-            expanded[synonym] = action               
+            expanded[synonym] = action 
     return expanded
 
-def match_line(line: str, synonym_map: dict, nlp) -> None:
+def match_keyword(line: str, synonym_map: dict, nlp) -> None:
     doc = nlp(line.lower())
     for token in doc:
         for form in (token.text, token.lemma_):
             if form in synonym_map:
-                print(f"  → matched '{form}' in: {line.strip()!r}")
+                print(f"  -> matched '{form}' in: {line.strip()!r}")
                 synonym_map[form]()
-                break 
+                return form
+    return None
+
+def match_context(line:str, synonym_map2: dict ,nlp)-> None:
+    doc = nlp(line.lower())
+    for token in doc:
+        for form in (token.text, token.lemma_):
+            if form in synonym_map2:
+                synonym_map2[form]()
+                return form
+    return None
+
 #speech to text
 model = whisper.load_model("tiny")
-result = model.transcribe("audio2.wav", fp16 = False)
-with open("output.txt", "w") as f:
+#result = model.transcribe("audio2.mp4", fp16 = False)
+result = model.transcribe("audio1.mp4", fp16 = False)
+with open("transcribed.txt", "w") as f:
     f.write(result["text"])
 
 
 #test, donc euh pas important
-audio = whisper.load_audio("audio2.wav")
+#audio = whisper.load_audio("audio2.mp4")
+audio = whisper.load_audio("audio1.mp4")
 audio = whisper.pad_or_trim(audio)
 mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
@@ -67,11 +100,20 @@ print(f"Detected language: {max(probs, key=probs.get)}")
 
 #comnstruire la synonym map
 synonym_map = build_synonym_map(keywords, lang=lang)
-print(f"Watching for {len(synonym_map)} words/synonyms: {sorted(synonym_map)}\n")
+#print(f"Watching for {len(synonym_map)} words/synonyms: {sorted(synonym_map)}\n")
 
 #search l'output et agir en fonction
-with open("output.txt", "r", encoding="utf-8") as f:
+with open("transcribed.txt", "r") as f:
     for line in f:
-        match_line(line, synonym_map, nlp)
+        found = match_keyword(line, synonym_map, nlp)
+        cont = match_context(line, context, nlp)
 
-#maybe get the word, write all of its synonyms in a file, read that file, match with a keyword, execute action
+        if found is not None:
+            if cont is not None:
+                break
+            break
+        #essayer de faire des actions en particuler avec certains mots, pour pas avoir a se casser la tete avec un contexte 
+
+
+#pour l'instant, des que wall-eB match une action, il l'execute, faudrait peut etre effacer l'output apres la 1ere action pour qu'il n'en fasse qu'une seule
+#mtn coder les actions, pour le tts, la nav et tout

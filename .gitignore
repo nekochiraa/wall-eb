@@ -58,3 +58,7 @@ __pycache__/
 
 .vscode/
 .idea/
+
+audio1.mp4
+audio2.mp4
+transcribed.txt
