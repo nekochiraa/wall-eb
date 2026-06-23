@@ -31,7 +31,7 @@ devel_isolated/
 
 # qcreator stuff
 CMakeLists.txt.user
-
+.env
 srv/_*.py
 *.pcd
 *.pyc

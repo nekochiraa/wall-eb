@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>wall_e_bringup</name>
+  <version>0.0.0</version>
+  <description>Wall-E bringup package.</description>
+  <maintainer email="nekochiraa@todo.todo">nekochiraa</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+  <exec_depend>wall_e_audio</exec_depend>
+  <exec_depend>wall_e_content</exec_depend>
+</package>

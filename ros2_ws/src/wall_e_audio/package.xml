@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>wall_e_audio</name>
+  <version>0.0.0</version>
+  <description>Wall-E audio node.</description>
+  <maintainer email="nekochiraa@todo.todo">nekochiraa</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>ament_index_python</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+</package>
