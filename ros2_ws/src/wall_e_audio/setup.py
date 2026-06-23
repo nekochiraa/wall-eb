@@ -1,8 +1,6 @@
 from setuptools import setup
 
-
 package_name = "wall_e_audio"
-
 
 setup(
     name=package_name,
