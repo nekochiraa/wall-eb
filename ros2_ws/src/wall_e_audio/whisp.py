@@ -9,7 +9,9 @@ nltk.download('omw-1.4', quiet=True)
 lang='fra'
 
 nlp = spacy.load("fr_core_news_sm")
-#actions a effectuer par Wall-e B
+#actions a effectuer par Wall-eB
+def action_wake():#wake up word de Wall-eB
+    print("on est la")
 def action_search():
     print("bip, boup *bruits electroniques*...recherche en cours...")
     #la on plug in la navigation de l'atelier + reconnaissance faciale
@@ -19,7 +21,7 @@ def action_speak():
     #plug le llm + le tts
 
 def action_shout():
-    print("ABCD")
+    print("j'ai ete investi d'une grande mission")
     #tts encore hein, on change pas une equipe qui gagne
 
 def action_internet():
@@ -31,21 +33,35 @@ def action_bis():
 def action_none():
     return
 #mots qui contextualisent
-context = {
+'''context = {
     "la": action_bis,
     "le": action_bis,
     "sur": action_bis,
-    "vas": action_bis
+    "va": action_bis
 
 }
-#mots a chercher -> action
-keywords = {
-    "chercher": action_search,
-    "parler":   action_speak,
-    "julien":    action_shout,
-    "internet": action_internet,#on verra apres pour les priorites/separer la phrase en sujet-verbe-complement
+'''
+context = {
+    "definition": action_internet,
+    "info":       action_internet,
+    "information": action_internet,
+    "pourquoi":   action_internet,
+    "internet":   action_internet,
 }
- 
+keywords = {
+    "parler": action_speak,
+    "parle": action_speak,
+    "chercher": action_search,
+    "cherche": action_search,
+    "trouver": action_search,
+    "trouve": action_search,
+    "crier": action_shout,
+    "crie": action_shout,
+    #"internet": action_internet,
+
+
+}
+
 #synonymes depuios wordnet
 def get_synonyms(word: str, lang: str = "fra") -> set[str]:
     synonyms = set()
@@ -81,22 +97,23 @@ def match_context(line:str, synonym_map2: dict ,nlp)-> None:
                 return form
     return None
 
+#multiline comments are there so i can directly modify the txt
+'''
 #speech to text
 model = whisper.load_model("tiny")
-#result = model.transcribe("audio2.mp4", fp16 = False)
-result = model.transcribe("audio1.mp4", fp16 = False)
+result = model.transcribe("audio2.mp4", fp16 = False)
+#result = model.transcribe("audio1.mp4", fp16 = False)
 with open("transcribed.txt", "w") as f:
     f.write(result["text"])
-
-
+'''
 #test, donc euh pas important
-#audio = whisper.load_audio("audio2.mp4")
-audio = whisper.load_audio("audio1.mp4")
+'''audio = whisper.load_audio("audio2.mp4")
+#audio = whisper.load_audio("audio1.mp4")
 audio = whisper.pad_or_trim(audio)
 mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
 _, probs = model.detect_language(mel)
-print(f"Detected language: {max(probs, key=probs.get)}")
+print(f"Detected language: {max(probs, key=probs.get)}")'''
 
 #comnstruire la synonym map
 synonym_map = build_synonym_map(keywords, lang=lang)
@@ -106,11 +123,8 @@ synonym_map = build_synonym_map(keywords, lang=lang)
 with open("transcribed.txt", "r") as f:
     for line in f:
         found = match_keyword(line, synonym_map, nlp)
-        cont = match_context(line, context, nlp)
-
         if found is not None:
-            if cont is not None:
-                break
+            match_context(line, context, nlp)
             break
         #essayer de faire des actions en particuler avec certains mots, pour pas avoir a se casser la tete avec un contexte 
 
