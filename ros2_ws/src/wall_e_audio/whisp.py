@@ -98,22 +98,22 @@ def match_context(line:str, synonym_map2: dict ,nlp)-> None:
     return None
 
 #multiline comments are there so i can directly modify the txt
-'''
+
 #speech to text
 model = whisper.load_model("tiny")
 result = model.transcribe("audio2.mp4", fp16 = False)
 #result = model.transcribe("audio1.mp4", fp16 = False)
 with open("transcribed.txt", "w") as f:
     f.write(result["text"])
-'''
+
 #test, donc euh pas important
-'''audio = whisper.load_audio("audio2.mp4")
+audio = whisper.load_audio("audio2.mp4")
 #audio = whisper.load_audio("audio1.mp4")
 audio = whisper.pad_or_trim(audio)
 mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
 _, probs = model.detect_language(mel)
-print(f"Detected language: {max(probs, key=probs.get)}")'''
+print(f"Detected language: {max(probs, key=probs.get)}")
 
 #comnstruire la synonym map
 synonym_map = build_synonym_map(keywords, lang=lang)
