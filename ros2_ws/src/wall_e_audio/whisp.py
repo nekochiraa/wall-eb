@@ -103,16 +103,11 @@ def match_context(line:str, synonym_map2: dict ,nlp)-> None:
 #speech to text
 model = whisper.load_model("tiny")
 result = model.transcribe("audio.wav", fp16 = False)
-#result = model.transcribe("audio2.mp4", fp16 = False)
-#result = model.transcribe("audio1.mp4", fp16 = False)
 with open("transcribed.txt", "w") as f:
     f.write(result["text"])
 
 #veritable audio feed a uttiliser
 audio = whisper.load_audio("audio.wav")
-#test, donc euh pas important
-#audio = whisper.load_audio("audio2.mp4")
-#audio = whisper.load_audio("audio1.mp4")
 audio = whisper.pad_or_trim(audio)
 mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
@@ -133,5 +128,5 @@ with open("transcribed.txt", "r") as f:
         #essayer de faire des actions en particuler avec certains mots, pour pas avoir a se casser la tete avec un contexte 
 
 
-#pour l'instant, des que wall-eB match une action, il l'execute, faudrait peut etre effacer l'output apres la 1ere action pour qu'il n'en fasse qu'une seule
+#pour l'instant, des que wall-eB match une action, il l'execute
 #mtn coder les actions, pour le tts, la nav et tout
