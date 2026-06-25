@@ -1,5 +1,3 @@
-import os
-
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
@@ -64,7 +62,7 @@ class Content(Node):
         if content:
             return content.strip()
         self.get_logger().error("Empty response from Cerebras, echoing prompt.")
-        return prompt
+        return ""
 
 
 def main():
