@@ -102,17 +102,17 @@ def match_context(line:str, synonym_map2: dict ,nlp)-> None:
 
 #speech to text
 model = whisper.load_model("tiny")
-#result = model.transcribe("audio.wav", fp16 = False)
+result = model.transcribe("audio.wav", fp16 = False)
 #result = model.transcribe("audio2.mp4", fp16 = False)
-result = model.transcribe("audio1.mp4", fp16 = False)
+#result = model.transcribe("audio1.mp4", fp16 = False)
 with open("transcribed.txt", "w") as f:
     f.write(result["text"])
 
 #veritable audio feed a uttiliser
-#audio = whisper.load_audio("audio.wav")
+audio = whisper.load_audio("audio.wav")
 #test, donc euh pas important
 #audio = whisper.load_audio("audio2.mp4")
-audio = whisper.load_audio("audio1.mp4")
+#audio = whisper.load_audio("audio1.mp4")
 audio = whisper.pad_or_trim(audio)
 mel = whisper.log_mel_spectrogram(audio).to(model.device)
 

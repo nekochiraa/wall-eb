@@ -1,6 +1,30 @@
 import pyaudio
 import wave
 
+
+import pyaudio
+#'''
+p = pyaudio.PyAudio()
+
+for i in range(p.get_device_count()):
+    info = p.get_device_info_by_index(i)
+
+    if info["maxInputChannels"] > 0:
+        print(
+            i,
+            info["name"],
+            "inputs:",
+            info["maxInputChannels"]
+        )
+#'''
+#'''Test pour peripheriques audio
+p = pyaudio.PyAudio()
+
+for i in range(p.get_device_count()):
+    info = p.get_device_info_by_index(i)
+    print(i, info["name"])
+#'''
+#'''
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
@@ -14,6 +38,7 @@ stream = audi.open(
     channels=CHANNELS,
     rate=RATE,
     input=True,
+    #input_device_index = 13,
     frames_per_buffer=CHUNK
 )
 
@@ -33,7 +58,7 @@ wf.setsampwidth(audi.get_sample_size(FORMAT))
 wf.setframerate(RATE)
 wf.writeframes(b"".join(frames))
 wf.close()
-
+#'''
 
 
 
