@@ -127,6 +127,6 @@ with open("transcribed.txt", "r") as f:
             break
         #essayer de faire des actions en particuler avec certains mots, pour pas avoir a se casser la tete avec un contexte 
 
-
+#kachow
 #pour l'instant, des que wall-eB match une action, il l'execute
 #mtn coder les actions, pour le tts, la nav et tout
