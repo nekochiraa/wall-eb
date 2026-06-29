@@ -32,6 +32,8 @@ def action_bis():
     print("2e action")
 def action_none():
     return
+def poke_action():
+    print("pika")
 #mots qui contextualisent
 '''context = {
     "la": action_bis,
@@ -48,6 +50,7 @@ context = {
     "pourquoi":   action_internet,
     "internet":   action_internet,
     "google": action_search,
+    "pokemon": poke_action,
 }
 keywords = {
     "parler": action_speak,
