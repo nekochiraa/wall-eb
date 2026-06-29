@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/wall_eb_audio/wall_eb_audio.egg-info
+writing ../build/wall_eb_audio/wall_eb_audio.egg-info/PKG-INFO
+writing dependency_links to ../build/wall_eb_audio/wall_eb_audio.egg-info/dependency_links.txt
+writing entry points to ../build/wall_eb_audio/wall_eb_audio.egg-info/entry_points.txt
+writing requirements to ../build/wall_eb_audio/wall_eb_audio.egg-info/requires.txt
+writing top-level names to ../build/wall_eb_audio/wall_eb_audio.egg-info/top_level.txt
+writing manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+reading manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+writing manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/ros2_ws/src/build/wall_eb_audio/build
+creating /workspace/ros2_ws/src/build/wall_eb_audio/build/lib
+creating /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio
+copying wall_eb_audio/audio.py -> /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio
+copying wall_eb_audio/__init__.py -> /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio
+running install
+running install_lib
+creating /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio
+copying /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio/audio.py -> /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio
+copying /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio/__init__.py -> /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio
+byte-compiling /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio/audio.py to audio.cpython-312.pyc
+byte-compiling /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /workspace/ros2_ws/src/install/wall_eb_audio/share/ament_index
+creating /workspace/ros2_ws/src/install/wall_eb_audio/share/ament_index/resource_index
+creating /workspace/ros2_ws/src/install/wall_eb_audio/share/ament_index/resource_index/packages
+copying resource/wall_eb_audio -> /workspace/ros2_ws/src/install/wall_eb_audio/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio
+running install_egg_info
+Copying ../build/wall_eb_audio/wall_eb_audio.egg-info to /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio-0.0.0-py3.12.egg-info
+running install_scripts
+Installing audio script to /workspace/ros2_ws/src/install/wall_eb_audio/lib/wall_eb_audio
+writing list of installed files to '/workspace/ros2_ws/src/build/wall_eb_audio/install.log'

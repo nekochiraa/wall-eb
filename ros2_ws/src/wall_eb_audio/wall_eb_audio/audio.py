@@ -1,10 +1,9 @@
 from pathlib import Path
 import wave
-
+import subprocess
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-from phonemizer import phonemize
 from ament_index_python.packages import get_package_share_directory
 from piper import PiperVoice, SynthesisConfig
 import simpleaudio as sa
@@ -18,35 +17,29 @@ class audio(Node):
             self.ttscallback,
             10,
         )
-        self.voice = PiperVoice.load("/workspace/ros2_ws/fr_FR-gilles-low.onnx")
+        self.voice = PiperVoice.load("/workspace/ros2_ws/tom1.onnx")
         self._play_obj = None
-        self.syn_config = SynthesisConfig(
-    volume=2.0,              # Entre 0.5 et 2.0 (0.5 = plus silencieux)
-    length_scale=1.0,        # > 1.0 = plus lent, < 1.0 = plus rapide
-    noise_scale=1.0,         # Contrôle la variation audio
-    noise_w_scale=1.0,       # Contrôle la variation des phonèmes
-    normalize_audio=False,   # True = normaliser le volume
-    speaker_id=0             # Pour les modèles multi-locuteurs
-)
     def ttscallback(self, msg):
         text = msg.data.strip()
         if not text:
             return
         self.get_logger().info(f"Received: {text}")
-        self.speak(phonemize(text,language="fr-fr", backend="espeak")) #ici on convertie le texte en phonetique pour eviter que le tts galere (premier commentaire qui n'est pas ecris par gpt)
+        print(text)
+        self.speak(text) #ici on convertie le texte en phonetique pour eviter que le tts galere (premier commentaire qui n'est pas ecris par gpt)
 
     def speak(self, text):
-        with wave.open("/tmp/tts.wav", "wb") as wav_file:
-            self.voice.synthesize_wav(text, wav_file, syn_config=self.syn_config)
-        self.play()
-
-    def play(self):
-        if self._play_obj and self._play_obj.is_playing():
-            self._play_obj.wait_done()
-            self._play_obj = None
-        wave_obj = sa.WaveObject.from_wave_file("/tmp/tts.wav")
-        self._play_obj = wave_obj.play()
-
+        path = "/tmp/tts.wav"
+        self.get_logger().info(f"Received: {text}")
+        with wave.open(path, "wb") as wav_file:
+            self.voice.synthesize_wav(text, wav_file)
+        self.play(path)
+    def is_playing(self):
+        return getattr(self, '_proc', None) is not None and self._proc.poll() is None
+    def play(self, path):
+        while (self.is_playing()):
+            pass
+        subprocess.run(['aplay',path])
+        
 
 def main():
     rclpy.init()

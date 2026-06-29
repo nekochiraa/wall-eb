@@ -1,0 +1,37 @@
+[1.830s] Invoking command in '/workspace/ros2_ws/src/wall_eb_content': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_content/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_content build --build-base /workspace/ros2_ws/src/build/wall_eb_content/build install --record /workspace/ros2_ws/src/build/wall_eb_content/install.log --single-version-externally-managed install_data
+[2.307s] running egg_info
+[2.307s] creating ../build/wall_eb_content/wall_eb_content.egg-info
+[2.339s] writing ../build/wall_eb_content/wall_eb_content.egg-info/PKG-INFO
+[2.340s] writing dependency_links to ../build/wall_eb_content/wall_eb_content.egg-info/dependency_links.txt
+[2.340s] writing entry points to ../build/wall_eb_content/wall_eb_content.egg-info/entry_points.txt
+[2.340s] writing requirements to ../build/wall_eb_content/wall_eb_content.egg-info/requires.txt
+[2.341s] writing top-level names to ../build/wall_eb_content/wall_eb_content.egg-info/top_level.txt
+[2.341s] writing manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+[2.408s] reading manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+[2.409s] writing manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+[2.409s] running build
+[2.410s] running build_py
+[2.410s] creating /workspace/ros2_ws/src/build/wall_eb_content/build
+[2.410s] creating /workspace/ros2_ws/src/build/wall_eb_content/build/lib
+[2.410s] creating /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content
+[2.411s] copying wall_eb_content/content.py -> /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content
+[2.411s] copying wall_eb_content/__init__.py -> /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content
+[2.411s] running install
+[2.422s] running install_lib
+[2.456s] creating /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content
+[2.456s] copying /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content/content.py -> /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content
+[2.456s] copying /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content/__init__.py -> /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content
+[2.457s] byte-compiling /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content/content.py to content.cpython-312.pyc
+[2.458s] byte-compiling /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content/__init__.py to __init__.cpython-312.pyc
+[2.459s] running install_data
+[2.459s] creating /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index
+[2.459s] creating /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index/resource_index
+[2.459s] creating /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index/resource_index/packages
+[2.459s] copying resource/wall_eb_content -> /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index/resource_index/packages
+[2.460s] copying package.xml -> /workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content
+[2.460s] running install_egg_info
+[2.495s] Copying ../build/wall_eb_content/wall_eb_content.egg-info to /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content-0.0.0-py3.12.egg-info
+[2.496s] running install_scripts
+[2.707s] Installing content script to /workspace/ros2_ws/src/install/wall_eb_content/lib/wall_eb_content
+[2.708s] writing list of installed files to '/workspace/ros2_ws/src/build/wall_eb_content/install.log'
+[2.766s] Invoked command in '/workspace/ros2_ws/src/wall_eb_content' returned '0': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_content/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_content build --build-base /workspace/ros2_ws/src/build/wall_eb_content/build install --record /workspace/ros2_ws/src/build/wall_eb_content/install.log --single-version-externally-managed install_data

@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/wall_eb_content/wall_eb_content.egg-info
+writing ../build/wall_eb_content/wall_eb_content.egg-info/PKG-INFO
+writing dependency_links to ../build/wall_eb_content/wall_eb_content.egg-info/dependency_links.txt
+writing entry points to ../build/wall_eb_content/wall_eb_content.egg-info/entry_points.txt
+writing requirements to ../build/wall_eb_content/wall_eb_content.egg-info/requires.txt
+writing top-level names to ../build/wall_eb_content/wall_eb_content.egg-info/top_level.txt
+writing manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+reading manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+writing manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/ros2_ws/src/build/wall_eb_content/build
+creating /workspace/ros2_ws/src/build/wall_eb_content/build/lib
+creating /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content
+copying wall_eb_content/content.py -> /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content
+copying wall_eb_content/__init__.py -> /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content
+running install
+running install_lib
+creating /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content
+copying /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content/content.py -> /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content
+copying /workspace/ros2_ws/src/build/wall_eb_content/build/lib/wall_eb_content/__init__.py -> /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content
+byte-compiling /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content/content.py to content.cpython-312.pyc
+byte-compiling /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index
+creating /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index/resource_index
+creating /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index/resource_index/packages
+copying resource/wall_eb_content -> /workspace/ros2_ws/src/install/wall_eb_content/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content
+running install_egg_info
+Copying ../build/wall_eb_content/wall_eb_content.egg-info to /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content-0.0.0-py3.12.egg-info
+running install_scripts
+Installing content script to /workspace/ros2_ws/src/install/wall_eb_content/lib/wall_eb_content
+writing list of installed files to '/workspace/ros2_ws/src/build/wall_eb_content/install.log'

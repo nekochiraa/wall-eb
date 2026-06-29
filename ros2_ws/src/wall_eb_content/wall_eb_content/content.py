@@ -1,15 +1,9 @@
+from dotenv import load_dotenv
+from ollamafreeapi import OllamaFreeAPI
+import os
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-
-try:
-    from cerebras.cloud.sdk import Cerebras
-except ImportError:
-    Cerebras = None
-
-
-MODEL_NAME = "gpt-oss-120b"
-
 
 class Content(Node):
     def __init__(self):
@@ -21,18 +15,14 @@ class Content(Node):
             self.handle_prompt,
             10,
         )
-        api_key = os.environ.get("CEREBRAS_API_KEY")
-        self.client = Cerebras(api_key=api_key) if Cerebras and api_key else None
-        if self.client is None:
-            self.get_logger().warn(
-                "Cerebras SDK or CEREBRAS_API_KEY missing; echo fallback enabled."
-            )
+        self.client = OllamaFreeAPI()
 
     def handle_prompt(self, msg):
         prompt = msg.data.strip()
         if not prompt:
             return
         response = self.askllm(prompt)
+        print(response)
         out = String()
         out.data = response
         self.publisher.publish(out)
@@ -40,28 +30,15 @@ class Content(Node):
     def askllm(self, prompt, context=""):
         if self.client is None:
             return prompt
-
-        completion = self.client.chat.completions.create(
-            messages=[
-                {
-                    "role": "user",
-                    "content": (
-                        prompt
-                        + " Tu es wall-eb (prononcer wall-e-bi) un assistant respectueux."
-                        " Refuse les contenus haineux, violents, illégaux ou dangereux."
-                        " Ne produis jamais de discrimination ou d'incitation à la haine."
-                        f" context : {context}"
-                    ),
-                }
-            ],
-            model=MODEL_NAME,
-            max_tokens=300,
-        )
-        choice = completion.choices[0]
-        content = getattr(choice.message, "content", None)
+        model="llama3.2:latest"
+        message = prompt + " Tu es wall-eb (prononcer wall-e-bi) un assistant respectueux. Refuse les contenus haineux, violents, illégaux ou dangereux. Ne produis jamais de discrimination ou d'incitation à la haine." + f" context : {context}"
+        
+        content = self.client.chat(prompt = message, model=model)
+        print(content)
         if content:
-            return content.strip()
-        self.get_logger().error("Empty response from Cerebras, echoing prompt.")
+            print(content)
+            return content
+        self.get_logger().error("Empty response.")
         return ""
 
 

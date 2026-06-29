@@ -1,0 +1,22 @@
+running egg_info
+writing ../build/wall_eb_audio/wall_eb_audio.egg-info/PKG-INFO
+writing dependency_links to ../build/wall_eb_audio/wall_eb_audio.egg-info/dependency_links.txt
+writing entry points to ../build/wall_eb_audio/wall_eb_audio.egg-info/entry_points.txt
+writing requirements to ../build/wall_eb_audio/wall_eb_audio.egg-info/requires.txt
+writing top-level names to ../build/wall_eb_audio/wall_eb_audio.egg-info/top_level.txt
+reading manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+writing manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+running build
+running build_py
+copying wall_eb_audio/audio.py -> /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio
+running install
+running install_lib
+copying /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio/audio.py -> /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio
+byte-compiling /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio/audio.py to audio.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/wall_eb_audio/wall_eb_audio.egg-info to /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio-0.0.0-py3.12.egg-info
+running install_scripts
+Installing audio script to /workspace/ros2_ws/src/install/wall_eb_audio/lib/wall_eb_audio
+writing list of installed files to '/workspace/ros2_ws/src/build/wall_eb_audio/install.log'

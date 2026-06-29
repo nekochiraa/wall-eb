@@ -1,0 +1,162 @@
+[0.228s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[0.228s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f2b67d8bd70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f2b67d8ba40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f2b67d8ba40>>, mixin_verb=('build',))[0m
+[0.302s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.303s] [34mcolcon.colcon_metadata.package_discovery.colcon_meta[0m [1;30mINFO[0m Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.304s] [34mcolcon.colcon_metadata.package_discovery.colcon_meta[0m [1;30mINFO[0m Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.305s] [34mcolcon.colcon_metadata.package_discovery.colcon_meta[0m [1;30mINFO[0m Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.305s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.305s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.305s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.305s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.305s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.305s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/workspace/ros2_ws/src'
+[0.305s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.306s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.351s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.351s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.351s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.351s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.351s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.352s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extension 'ignore'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extension 'ignore_ament_install'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extensions ['colcon_pkg']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extension 'colcon_pkg'
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extensions ['colcon_meta']
+[0.353s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extension 'colcon_meta'
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extensions ['ros']
+[0.354s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_audio) by extension 'ros'
+[0.357s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'wall_eb_audio' with type 'ros.ament_python' and name 'wall_eb_audio'[0m
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extension 'ignore'
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extension 'ignore_ament_install'
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extensions ['colcon_pkg']
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extension 'colcon_pkg'
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extensions ['colcon_meta']
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extension 'colcon_meta'
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extensions ['ros']
+[0.358s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(wall_eb_content) by extension 'ros'
+[0.359s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'wall_eb_content' with type 'ros.ament_python' and name 'wall_eb_content'[0m
+[0.359s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.359s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.359s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.360s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.360s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'cmake_args' from command line to 'None'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'cmake_target' from command line to 'None'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'cmake_clean_cache' from command line to 'False'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'cmake_clean_first' from command line to 'False'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'cmake_force_configure' from command line to 'False'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'ament_cmake_args' from command line to 'None'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'catkin_cmake_args' from command line to 'None'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_audio' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.388s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'wall_eb_audio' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/ros2_ws/src/build/wall_eb_audio', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/ros2_ws/src/install/wall_eb_audio', 'merge_install': False, 'path': '/workspace/ros2_ws/src/wall_eb_audio', 'symlink_install': False, 'test_result_base': None}[0m
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'cmake_args' from command line to 'None'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'cmake_target' from command line to 'None'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'cmake_clean_cache' from command line to 'False'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'cmake_clean_first' from command line to 'False'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'cmake_force_configure' from command line to 'False'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'ament_cmake_args' from command line to 'None'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'catkin_cmake_args' from command line to 'None'
+[0.389s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'wall_eb_content' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'wall_eb_content' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/ros2_ws/src/build/wall_eb_content', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/ros2_ws/src/install/wall_eb_content', 'merge_install': False, 'path': '/workspace/ros2_ws/src/wall_eb_content', 'symlink_install': False, 'test_result_base': None}[0m
+[0.390s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.395s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.395s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/workspace/ros2_ws/src/wall_eb_audio' with build type 'ament_python'
+[0.395s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('wall_eb_audio', 'ament_prefix_path')
+[0.399s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.399s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/hook/ament_prefix_path.ps1'
+[0.401s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/hook/ament_prefix_path.dsv'
+[0.401s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/hook/ament_prefix_path.sh'
+[0.402s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.403s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.410s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/workspace/ros2_ws/src/wall_eb_content' with build type 'ament_python'
+[0.410s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('wall_eb_content', 'ament_prefix_path')
+[0.410s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/hook/ament_prefix_path.ps1'
+[0.411s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/hook/ament_prefix_path.dsv'
+[0.412s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/hook/ament_prefix_path.sh'
+[0.413s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.413s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.786s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/workspace/ros2_ws/src/wall_eb_audio'
+[0.786s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.786s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.160s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/workspace/ros2_ws/src/wall_eb_content'
+[1.160s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.161s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.203s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/workspace/ros2_ws/src/wall_eb_audio': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_audio build --build-base /workspace/ros2_ws/src/build/wall_eb_audio/build install --record /workspace/ros2_ws/src/build/wall_eb_audio/install.log --single-version-externally-managed install_data[0m
+[2.241s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/workspace/ros2_ws/src/wall_eb_content': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_content/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_content build --build-base /workspace/ros2_ws/src/build/wall_eb_content/build install --record /workspace/ros2_ws/src/build/wall_eb_content/install.log --single-version-externally-managed install_data[0m
+[3.146s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/workspace/ros2_ws/src/wall_eb_audio' returned '0': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_audio build --build-base /workspace/ros2_ws/src/build/wall_eb_audio/build install --record /workspace/ros2_ws/src/build/wall_eb_audio/install.log --single-version-externally-managed install_data[0m
+[3.152s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio' for CMake module files
+[3.153s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio' for CMake config files
+[3.155s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio/lib'
+[3.155s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio/bin'
+[3.156s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio/lib/pkgconfig/wall_eb_audio.pc'
+[3.156s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages'
+[3.156s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('wall_eb_audio', 'pythonpath')
+[3.157s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/hook/pythonpath.ps1'
+[3.158s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/hook/pythonpath.dsv'
+[3.158s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/hook/pythonpath.sh'
+[3.160s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_audio/bin'
+[3.160s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(wall_eb_audio)
+[3.161s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/package.ps1'
+[3.163s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/package.dsv'
+[3.164s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/package.sh'
+[3.166s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/package.bash'
+[3.167s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_audio/share/wall_eb_audio/package.zsh'
+[3.168s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/workspace/ros2_ws/src/install/wall_eb_audio/share/colcon-core/packages/wall_eb_audio)
+[3.176s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content' for CMake module files
+[3.177s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/workspace/ros2_ws/src/wall_eb_content' returned '0': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_content/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_content build --build-base /workspace/ros2_ws/src/build/wall_eb_content/build install --record /workspace/ros2_ws/src/build/wall_eb_content/install.log --single-version-externally-managed install_data[0m
+[3.178s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content' for CMake config files
+[3.179s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content/lib'
+[3.179s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content/bin'
+[3.179s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content/lib/pkgconfig/wall_eb_content.pc'
+[3.180s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages'
+[3.180s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('wall_eb_content', 'pythonpath')
+[3.180s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/hook/pythonpath.ps1'
+[3.181s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/hook/pythonpath.dsv'
+[3.182s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/hook/pythonpath.sh'
+[3.184s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/workspace/ros2_ws/src/install/wall_eb_content/bin'
+[3.184s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(wall_eb_content)
+[3.184s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/package.ps1'
+[3.185s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/package.dsv'
+[3.186s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/package.sh'
+[3.187s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/package.bash'
+[3.188s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/workspace/ros2_ws/src/install/wall_eb_content/share/wall_eb_content/package.zsh'
+[3.188s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/workspace/ros2_ws/src/install/wall_eb_content/share/colcon-core/packages/wall_eb_content)
+[3.189s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[3.191s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[3.191s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[3.191s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[3.203s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.204s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.204s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[3.208s] [34mcolcon.colcon_notification.desktop_notification.notify2[0m [1;30mDEBUG[0m [32mFailed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message[0m
+[3.209s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[3.210s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/workspace/ros2_ws/src/install/local_setup.ps1'
+[3.212s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/workspace/ros2_ws/src/install/_local_setup_util_ps1.py'
+[3.214s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/workspace/ros2_ws/src/install/setup.ps1'
+[3.216s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/workspace/ros2_ws/src/install/local_setup.sh'
+[3.217s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/workspace/ros2_ws/src/install/_local_setup_util_sh.py'
+[3.218s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/workspace/ros2_ws/src/install/setup.sh'
+[3.220s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/workspace/ros2_ws/src/install/local_setup.bash'
+[3.221s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/workspace/ros2_ws/src/install/setup.bash'
+[3.223s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/workspace/ros2_ws/src/install/local_setup.zsh'
+[3.224s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/workspace/ros2_ws/src/install/setup.zsh'

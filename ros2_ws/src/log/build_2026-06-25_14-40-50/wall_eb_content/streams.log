@@ -1,0 +1,21 @@
+[1.827s] Invoking command in '/workspace/ros2_ws/src/wall_eb_content': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_content/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_content build --build-base /workspace/ros2_ws/src/build/wall_eb_content/build install --record /workspace/ros2_ws/src/build/wall_eb_content/install.log --single-version-externally-managed install_data
+[2.312s] running egg_info
+[2.344s] writing ../build/wall_eb_content/wall_eb_content.egg-info/PKG-INFO
+[2.345s] writing dependency_links to ../build/wall_eb_content/wall_eb_content.egg-info/dependency_links.txt
+[2.345s] writing entry points to ../build/wall_eb_content/wall_eb_content.egg-info/entry_points.txt
+[2.346s] writing requirements to ../build/wall_eb_content/wall_eb_content.egg-info/requires.txt
+[2.346s] writing top-level names to ../build/wall_eb_content/wall_eb_content.egg-info/top_level.txt
+[2.413s] reading manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+[2.415s] writing manifest file '../build/wall_eb_content/wall_eb_content.egg-info/SOURCES.txt'
+[2.415s] running build
+[2.415s] running build_py
+[2.415s] running install
+[2.427s] running install_lib
+[2.462s] running install_data
+[2.462s] running install_egg_info
+[2.498s] removing '/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content-0.0.0-py3.12.egg-info' (and everything under it)
+[2.498s] Copying ../build/wall_eb_content/wall_eb_content.egg-info to /workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages/wall_eb_content-0.0.0-py3.12.egg-info
+[2.500s] running install_scripts
+[2.710s] Installing content script to /workspace/ros2_ws/src/install/wall_eb_content/lib/wall_eb_content
+[2.711s] writing list of installed files to '/workspace/ros2_ws/src/build/wall_eb_content/install.log'
+[2.766s] Invoked command in '/workspace/ros2_ws/src/wall_eb_content' returned '0': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_content/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_content/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_content build --build-base /workspace/ros2_ws/src/build/wall_eb_content/build install --record /workspace/ros2_ws/src/build/wall_eb_content/install.log --single-version-externally-managed install_data

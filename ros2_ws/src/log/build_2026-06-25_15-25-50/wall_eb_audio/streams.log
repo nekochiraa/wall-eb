@@ -1,0 +1,24 @@
+[1.887s] Invoking command in '/workspace/ros2_ws/src/wall_eb_audio': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_audio build --build-base /workspace/ros2_ws/src/build/wall_eb_audio/build install --record /workspace/ros2_ws/src/build/wall_eb_audio/install.log --single-version-externally-managed install_data
+[2.389s] running egg_info
+[2.422s] writing ../build/wall_eb_audio/wall_eb_audio.egg-info/PKG-INFO
+[2.423s] writing dependency_links to ../build/wall_eb_audio/wall_eb_audio.egg-info/dependency_links.txt
+[2.423s] writing entry points to ../build/wall_eb_audio/wall_eb_audio.egg-info/entry_points.txt
+[2.423s] writing requirements to ../build/wall_eb_audio/wall_eb_audio.egg-info/requires.txt
+[2.423s] writing top-level names to ../build/wall_eb_audio/wall_eb_audio.egg-info/top_level.txt
+[2.491s] reading manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+[2.492s] writing manifest file '../build/wall_eb_audio/wall_eb_audio.egg-info/SOURCES.txt'
+[2.492s] running build
+[2.493s] running build_py
+[2.493s] copying wall_eb_audio/audio.py -> /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio
+[2.493s] running install
+[2.505s] running install_lib
+[2.538s] copying /workspace/ros2_ws/src/build/wall_eb_audio/build/lib/wall_eb_audio/audio.py -> /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio
+[2.539s] byte-compiling /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio/audio.py to audio.cpython-312.pyc
+[2.541s] running install_data
+[2.541s] running install_egg_info
+[2.576s] removing '/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio-0.0.0-py3.12.egg-info' (and everything under it)
+[2.576s] Copying ../build/wall_eb_audio/wall_eb_audio.egg-info to /workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio-0.0.0-py3.12.egg-info
+[2.578s] running install_scripts
+[2.789s] Installing audio script to /workspace/ros2_ws/src/install/wall_eb_audio/lib/wall_eb_audio
+[2.790s] writing list of installed files to '/workspace/ros2_ws/src/build/wall_eb_audio/install.log'
+[2.853s] Invoked command in '/workspace/ros2_ws/src/wall_eb_audio' returned '0': PYTHONPATH=/workspace/ros2_ws/src/build/wall_eb_audio/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/wall_eb_audio build --build-base /workspace/ros2_ws/src/build/wall_eb_audio/build install --record /workspace/ros2_ws/src/build/wall_eb_audio/install.log --single-version-externally-managed install_data

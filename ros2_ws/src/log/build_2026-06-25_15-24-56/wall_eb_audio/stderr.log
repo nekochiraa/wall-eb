@@ -1,0 +1,5 @@
+  File "/workspace/ros2_ws/src/install/wall_eb_audio/lib/python3.12/site-packages/wall_eb_audio/audio.py", line 36
+    def async play(self):
+        ^^^^^
+SyntaxError: invalid syntax
+
