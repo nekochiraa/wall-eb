@@ -36,14 +36,6 @@ def action_none():
 def poke_action():
     print("pika")
 #mots qui contextualisent
-'''context = {
-    "la": action_bis,
-    "le": action_bis,
-    "sur": action_bis,
-    "va": action_bis
- 
-}
-'''
 context = {
     "definition": action_internet,
     "info":       action_internet,
@@ -147,5 +139,5 @@ print(json.dumps(result_json, ensure_ascii=False))
  
 #kachow
 #pour l'instant, des que wall-eB match une action, il l'execute
-#mtn coder les actions, pour le tts, la nav et tout
+#mtn coder les actions, pour le tts, la nav et tout - on a des tuples maintenant
 
