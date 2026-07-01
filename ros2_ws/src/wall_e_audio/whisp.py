@@ -140,4 +140,4 @@ print(json.dumps(result_json, ensure_ascii=False))
 #kachow
 #pour l'instant, des que wall-eB match une action, il l'execute
 #mtn coder les actions, pour le tts, la nav et tout - on a des tuples maintenant
-
+#on va separer une phrase en propositions(verbes) comme ca une action = plein de petites actions
