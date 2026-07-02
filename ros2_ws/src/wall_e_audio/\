@@ -149,13 +149,13 @@ def command_tuple(text: str, synonym_map: dict, queue: deque):
             #action_search()
     return None
 
-def exequeute(queue: deque, synonym_map: dict):   #haha execute + queue = exequeute...bref
+def exqueute(queue: deque, synonym_map: dict):   #haha execute + queue = exequeute...bref
     #les ordres de la queue en ordre    
     orders = {g.__name__: g for g in synonym_map.values()}
     while queue:
         command = queue.popleft()
         print(json.dumps(command, ensure_ascii = False))
-        orders[command["action"]]()
+        orders[command("action")]()
 
 def run(audio_file: str):
     synonym_map = build_synonym_map(keywords, lang=lang)
