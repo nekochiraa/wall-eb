@@ -11,11 +11,16 @@ lang = 'fra'
 nlp = spacy.load("fr_core_news_sm")
 
 # Actions
+def big_action():
+    action_wake()
+    action_bis()
 def action_wake():
     print("on est la")
 
 def action_search():
-    print("bip, boup *bruits electroniques*...recherche en cours...")
+    action_navigate()
+    action_scan()
+    #print("bip, boup *bruits electroniques*...recherche en cours...")
     # plug navigation de l'atelier + reconnaissance faciale
 
 def action_speak():
@@ -39,6 +44,12 @@ def action_none():
 def poke_action():
     print("pika")
 
+def action_navigate():
+    print("navigating...")
+
+def action_scan():
+    print("scanning...")
+        
 # Dico 
 context = {
     "definition":  action_internet,
@@ -126,7 +137,11 @@ def command_tuple(text: str, synonym_map: dict) -> dict:
         action_name, token_idx = match_keyword(line, synonym_map, nlp)
         if action_name is not None:
             complement = match_context(line, context, nlp, keyword_idx=token_idx)
+            synonym_map_by_name = {v.__name__: v for v in synonym_map.values()}#prints
+            synonym_map_by_name[action_name]()#also prints
             return {"action": action_name, "complement": complement}
+        #else:
+            #action_search()
     return None
 
 def run(audio_file: str):
