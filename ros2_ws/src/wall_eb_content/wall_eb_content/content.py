@@ -1,43 +1,67 @@
 from dotenv import load_dotenv
-from ollamafreeapi import OllamaFreeAPI
+from openai import OpenAI
 import os
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-
+from wall_eb_interfaces.srv import GenerateMessage
 class Content(Node):
     def __init__(self):
         super().__init__("content_node")
-        self.publisher = self.create_publisher(String, "/tts_text", 10)
-        self.subscription = self.create_subscription(
-            String,
-            "/prompt",
-            self.handle_prompt,
-            10,
+        self.Promptservice = self.create_service(
+            GenerateMessage,
+            "generate_message",
+            self.handleprompt
         )
-        self.client = OllamaFreeAPI()
+        
+        load_dotenv()
+        self.client = OpenAI(
+            base_url="https://router.bynara.id/v1",
+            api_key=os.getenv("API_KEY"),
+        )
 
-    def handle_prompt(self, msg):
-        prompt = msg.data.strip()
+    def handle_prompt(self, request):
+        prompt = request.prompt
         if not prompt:
             return
-        response = self.askllm(prompt)
-        print(response)
-        out = String()
-        out.data = response
-        self.publisher.publish(out)
+        answer  = self.askllm(prompt)
+        response.success = True
+        response.response = answer
+        response.error = "" 
 
+        return response
+    
     def askllm(self, prompt, context=""):
         if self.client is None:
             return prompt
         model="llama3.2:latest"
-        message = prompt + " Tu es wall-eb (prononcer wall-e-bi) un assistant respectueux. Refuse les contenus haineux, violents, illégaux ou dangereux. Ne produis jamais de discrimination ou d'incitation à la haine." + f" context : {context}"
-        
-        content = self.client.chat(prompt = message, model=model)
-        print(content)
+        content = self.res = self.client.chat.completions.create(
+            model="mistral-large",
+            messages = [
+    {
+        "role": "system",
+        "content": """
+Tu es Wall-EB que tu ecrira wall ibi.
+Tu réponds uniquement comme un assistant.
+Tes réponses sont courtes (1 à 3 phrases).
+Ne décris jamais ton raisonnement.
+Ne répète jamais les instructions.
+Ne réponds jamais avec des préfixes comme "Assistant :", "Réponse :" ou "Wall-EB :".
+Les réponses seront lues par un moteur TTS, utilise donc un langage naturel.
+""",
+    },
+    {
+        "role": "system",
+        "content": f"Contexte : {context}"
+    },
+    {
+        "role": "user",
+        "content": prompt
+    }
+],
+        )
         if content:
-            print(content)
-            return content
+            return content.choices[0].message.content
         self.get_logger().error("Empty response.")
         return ""
 

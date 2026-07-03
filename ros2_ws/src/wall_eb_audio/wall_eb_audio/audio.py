@@ -1,5 +1,6 @@
 from pathlib import Path
 import wave
+from wall_eb_interfaces.srv import GenerateMessage
 import subprocess
 import rclpy
 from rclpy.node import Node
@@ -11,28 +12,51 @@ import simpleaudio as sa
 class audio(Node):
     def __init__(self):
         Node.__init__(self, "audio_node")
-        self.subscription = self.create_subscription(
-            String,
-            "/tts_text",
+        self.action_generateTTs(
+            self,
+            GenerateTTs,
+            "GenerateTTs",
             self.ttscallback,
-            10,
+        )
+        self.GenerateMessage = self.create_client(
+            GenerateMessage,
+            "generate_message"
+        )
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("En attente du service...")
+        self.action_play(
+            self,
+            Play,
+            "Play",
+            self.play,
         )
         self.voice = PiperVoice.load("/workspace/ros2_ws/tom1.onnx")
         self._play_obj = None
-    def ttscallback(self, msg):
-        text = msg.data.strip()
-        if not text:
-            return
-        self.get_logger().info(f"Received: {text}")
-        print(text)
-        self.speak(text) #ici on convertie le texte en phonetique pour eviter que le tts galere (premier commentaire qui n'est pas ecris par gpt)
 
+    async def ttscallback(self, goal_handle):
+        text = goal_handle.request.text
+        self.get_logger().info(f"Génération : {text}")
+
+        request = GenerateMessage.Request()
+        request.prompt = text
+        future = self.client.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+        response = future.result()
+        
+        path = self.speak(response)
+
+        goal_handle.succeed()
+        result = GenerateTTS.Result()
+        result.success = True
+        result.audio_id = audio_id
+        return result
+    
     def speak(self, text):
         path = "/tmp/tts.wav"
         self.get_logger().info(f"Received: {text}")
         with wave.open(path, "wb") as wav_file:
             self.voice.synthesize_wav(text, wav_file)
-        self.play(path)
+        return path
     def is_playing(self):
         return getattr(self, '_proc', None) is not None and self._proc.poll() is None
     def play(self, path):

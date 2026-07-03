@@ -19,7 +19,8 @@ devel_isolated/
 *.cfgc
 /cfg/cpp/
 /cfg/*.py
-
+ros2_ws/build/
+ros2_ws/log/
 # Ignore generated docs
 *.dox
 *.wikidoc
