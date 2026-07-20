@@ -2,7 +2,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 
 sample_rate = 16000
-time = 10 #on changera plus tard
+time = 5 #on changera plus tard
 
 audio = sd.rec(
     int(sample_rate * time),

@@ -12,7 +12,7 @@ nltk.download('omw-1.4', quiet=True)
 
 lang = 'fra'
 nlp = spacy.load("fr_core_news_sm")
-
+'''
 # Actions
 def big_action():
     action_wake()
@@ -116,7 +116,7 @@ def match_context(line: str, synonym_map2: dict, nlp, keyword_idx: int = None):
         complement = " ".join(t.text for t in doc[keyword_idx + 1:]).strip()
         return complement if complement else None
     return None
-
+'''
 # stuff a faire 
 def transcribe(audio_file: str) -> str:
     """Transcrit l'audio en texte et sauvegarde dans transcribed.txt."""
@@ -126,7 +126,7 @@ def transcribe(audio_file: str) -> str:
     with open("transcribed.txt", "w", encoding="utf-8") as f:
         f.write(text)
     return text
-
+'''
 def detect_language(audio_file: str) -> str:
     model = whisper.load_model("tiny")
     audio = whisper.load_audio(audio_file)
@@ -157,15 +157,17 @@ def exequeute(queue: deque, synonym_map: dict):   #haha execute + queue = exeque
         print(json.dumps(command, ensure_ascii = False))
         orders[command["action"]]()
 
-def run(audio_file: str):
-    synonym_map = build_synonym_map(keywords, lang=lang)
-    text = transcribe(audio_file)
-    detected_lang = detect_language(audio_file)
-    print(f"Detected language: {detected_lang}")
 
-    queue = deque()
-    command_tuple(text, synonym_map, queue)
-    exequeute(queue, synonym_map)
+'''
+def run(audio_file: str):
+    #synonym_map = build_synonym_map(keywords, lang=lang)
+    text = transcribe(audio_file)
+    #detected_lang = detect_language(audio_file)
+    #print(f"Detected language: {detected_lang}")
+
+    #queue = deque()
+    #command_tuple(text, synonym_map, queue)
+    #exequeute(queue, synonym_map)
 
 run("audio.wav")
 
